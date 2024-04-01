@@ -1,69 +1,46 @@
 package com.stepdefinitions;
 
+
+import org.testng.Assert;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+
 public class StepDefinitions {
 
-	@Given("I want to write a step with precondition")
-	public void i_want_to_write_a_step_with_precondition() {
-	System.out.println("Hello All!");
+	int num1, num2, result;
+
+	@Given("I have two numbers {int} and {int}")
+	public void i_have_two_numbers_and(Integer int1, Integer int2) {
+		this.num1 = int1;
+		this.num2 = int2;
 	}
 
-	@Given("some other precondition")
-	public void some_other_precondition() {
-	    
+	@When("I add them together")
+	public void i_add_them_together() {
+		result = num1 + num2;
 	}
 
-	@When("I complete action")
-	public void i_complete_action() {
-	    
+	@Then("the result should be {int}")
+	public void the_result_should_be(Integer expectedResult) {
+		Assert.assertEquals(expectedResult == result, true);
 	}
 
-	@When("some other action")
-	public void some_other_action() {
-	   
+	@When("I subtract the second number from the first number")
+	public void i_subtract_the_second_number_from_the_first_number() {
+		result = num1 - num2;
 	}
 
-	@When("yet another action")
-	public void yet_another_action() {
-	  
+	@When("I multiply them together")
+	public void i_multiply_them_together() {
+		result = num1 * num2;
 	}
 
-	@Then("I validate the outcomes")
-	public void i_validate_the_outcomes() {
-	   
-	}
-
-	@Then("check more outcomes")
-	public void check_more_outcomes() {
-	   
-	}
-
-	@Given("I want to write a step with name1")
-	public void i_want_to_write_a_step_with_name1() {
-	   
-	}
-
-	@When("I check for the {int} in step")
-	public void i_check_for_the_in_step(Integer int1) {
-	  
-	}
-
-	@Then("I verify the success in step")
-	public void i_verify_the_success_in_step() {
-	 
-	}
-
-	@Given("I want to write a step with name2")
-	public void i_want_to_write_a_step_with_name2() {
-	    
-	}
-
-	@Then("I verify the Fail in step")
-	public void i_verify_the_fail_in_step() {
-	 
+	@When("I divide the first number by the second number")
+	public void i_divide_the_first_number_by_the_second_number() {
+		result = num1/num2;
 	}
 
 }

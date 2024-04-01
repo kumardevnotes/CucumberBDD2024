@@ -1,24 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="0.177">
-<testcase classname="Title of your feature" name="Title of your scenario" time="0.046">
-<system-out><![CDATA[Given I want to write a step with precondition..............................passed
-And some other precondition.................................................passed
-When I complete action......................................................passed
-And some other action.......................................................passed
-And yet another action......................................................passed
-Then I validate the outcomes................................................passed
-And check more outcomes.....................................................passed
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="0.191">
+    <testcase classname="Arithmetic Operations" name="verify Addition" time="0.051">
+        <system-out><![CDATA[Given I have two numbers 10 and 5...........................................passed
+When I add them together....................................................passed
+Then the result should be 15................................................passed
 ]]></system-out>
-</testcase>
-<testcase classname="Title of your feature" name="Title of your scenario outline" time="0.001">
-<system-out><![CDATA[Given I want to write a step with name1.....................................passed
-When I check for the 5 in step..............................................passed
-Then I verify the success in step...........................................passed
+    </testcase>
+    <testcase classname="Arithmetic Operations" name="verify Subtraction" time="0.003">
+        <system-out><![CDATA[Given I have two numbers 10 and 5...........................................passed
+When I subtract the second number from the first number.....................passed
+Then the result should be 5.................................................passed
 ]]></system-out>
-</testcase>
-<testcase classname="Title of your feature" name="Title of your scenario outline 2" time="0.002">
-<system-out><![CDATA[Given I want to write a step with name2.....................................passed
-When I check for the 7 in step..............................................passed
-Then I verify the Fail in step..............................................passed
+    </testcase>
+    <testcase classname="Arithmetic Operations" name="verify Multiplication" time="0.003">
+        <system-out><![CDATA[Given I have two numbers 10 and 5...........................................passed
+When I multiply them together...............................................passed
+Then the result should be 50................................................passed
 ]]></system-out>
-</testcase>
+    </testcase>
+    <testcase classname="Arithmetic Operations" name="verify Division" time="0.004">
+        <system-out><![CDATA[Given I have two numbers 10 and 5...........................................passed
+When I divide the first number by the second number.........................passed
+Then the result should be 2.................................................passed
+]]></system-out>
+    </testcase>
 </testsuite>

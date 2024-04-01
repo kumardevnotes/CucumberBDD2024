@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = ".//src//test//resources//features//Test2.feature",
+@CucumberOptions(features = ".//src//test//resources//features//ArithmeticOps.feature",
         glue = {"com.stepdefinitions"},
 
         monochrome = true,
@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
                 "junit:target/cucumber-reports/cucumber.xml",
                 "html:target/HTMLReports/report.html",
                 "json:target/cucumber-reports/cucumber.json"},
-        tags = "@SmokeTests")
+        tags = "@ArithmeticOps")
 public class TestRunner {
 
 }
